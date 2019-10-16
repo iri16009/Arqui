@@ -5,7 +5,7 @@ reg [31:0] pre_divisor = 0;
 reg [31:0] cont = 0;
 reg start = 1;
 reg [15:0] resta, pre_cocido, res, cocido;
-
+//hola
 always @ (posedge clk) begin
 
   if(start) begin
