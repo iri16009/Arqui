@@ -1,4 +1,8 @@
 /*
+* Gustavo Ordoñez
+* Gabriela Iriarte
+*/
+/*
 * El módulo control_multiplicand toma el lsb y si es 0 entonces suma 0
 * si es 1 entonces suma el multiplicando.
 */

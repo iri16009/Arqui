@@ -1,3 +1,7 @@
+/*
+* Gustavo Ordoñez
+* Gabriela Iriarte
+*/
 module division(input clk, input [31:0] dividendo, divisor, output [31:0] cociente, residuo);
 
 reg [31:0] shift_register;

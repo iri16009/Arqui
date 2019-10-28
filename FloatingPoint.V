@@ -1,4 +1,8 @@
-module suma_fp(input clk, input [31:0] A, B, output [31:0] Y, output  total);
+/*
+* Gustavo OrdoÃ±ez
+* Gabriela Iriarte
+*/
+module suma_fp(input clk, input [31:0] A, B, output [31:0] Y);
 
 reg start = 1'b1;             // Bit de inicio
 reg [31:0] A_capt, B_capt;    // Capturamos los números a operar
@@ -169,6 +173,6 @@ end // end del else del if(start)
 end // end del always
 
 assign Y = resultado_final;
-assign total = dummy;
+
 
 endmodule

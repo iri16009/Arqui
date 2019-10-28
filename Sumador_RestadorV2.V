@@ -1,3 +1,7 @@
+/*
+* Gustavo Ordoñez
+* Gabriela Iriarte
+*/
 module add_sub(input [31:0] A, B, input SR, output [31:0] Y);
 
 wire [32:0] C_outb;

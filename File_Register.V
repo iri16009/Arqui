@@ -1,4 +1,8 @@
 // Register Memory
+/*
+* Gustavo Ordoñez
+* Gabriela Iriarte
+*/
 module regmem (clk,regwrite,raddr1,raddr2,waddr,rdata1,rdata2,wdata);
 
  input clk,regwrite;
