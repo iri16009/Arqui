@@ -3,6 +3,8 @@
 * si es 1 entonces suma el multiplicando.
 */
 
+//`include "Sumador_RestadorV2.v"
+
 module multiplicador (input clk, input [31:0] A, B, output [31:0] resultado, salida,dum, output [4:0] cuenta, output lsb);
 
 reg [31:0] mcand, mplier, aux_out, shift_out, shift_in, aux_in, final_reg;
@@ -73,8 +75,8 @@ wire [31:0] suma_0, suma_mcand, load_mcand, load_0, dummy;
 
 
 //concatenation1 <= {ceros[15:0],shift_out[31:16]};
-add_sub alu2( {16'b0,shift_out[31:16]} , 32'b0, 0, suma_0);
-add_sub alu(mcand,  {16'b0,shift_out[31:16]}, 0, suma_mcand);
+add alu2( {16'b0,shift_out[31:16]} , 32'b0, 0, suma_0);
+add alu(mcand,  {16'b0,shift_out[31:16]}, 0, suma_mcand);
 
 //shift_reg sr1( {suma_mcand[15:0], shift_out[15:0]} , clk, 1, load_mcand);
 //shift_reg sr2( {suma_0[15:0], shift_out[15:0]} , clk, 1, load_0);
@@ -223,7 +225,7 @@ endmodule
  * El módulo add_sub es el sumador restador
 */
 
-module add_sub(input [31:0] A, B, input SR, output [31:0] Y);
+module add(input [31:0] A, B, input SR, output [31:0] Y);
 
 wire [32:0] C_outb;
 wire [31:0] K, S, C_out;
